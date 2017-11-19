@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Jj-ba-lBT" id="wU1-Wb-uhT">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -133,9 +133,9 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cH-28-CaT">
-                                <rect key="frame" x="142" y="376" width="81" height="30"/>
+                                <rect key="frame" x="147" y="376" width="81" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="DBq-LT-i0e"/>
+                                    <constraint firstAttribute="height" constant="30" id="SZp-y8-J65"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Login"/>
@@ -144,18 +144,28 @@
                                     <segue destination="ctz-uv-L6k" kind="show" identifier="segueTheaterTable" id="nbF-k8-lln"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xri-Rb-9b7">
+                                <rect key="frame" x="120" y="442" width="135" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Booking History"/>
+                                <connections>
+                                    <action selector="btnBookingHistoryPressed:" destination="LDG-Rq-Dou" eventType="touchUpInside" id="RRR-re-RjT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Nrr-tW-Hdi" firstAttribute="top" secondItem="bLo-oH-WxY" secondAttribute="top" constant="60" id="31W-Vm-UqN"/>
-                            <constraint firstItem="bLo-oH-WxY" firstAttribute="bottom" secondItem="3cH-28-CaT" secondAttribute="bottom" constant="261" id="5FF-vV-DRR"/>
-                            <constraint firstItem="bLo-oH-WxY" firstAttribute="trailing" secondItem="3cH-28-CaT" secondAttribute="trailing" constant="152" id="LHc-Hc-wWq"/>
+                            <constraint firstItem="3cH-28-CaT" firstAttribute="centerX" secondItem="gd1-Ug-TQp" secondAttribute="centerX" id="9Jj-Ic-ApV"/>
+                            <constraint firstItem="3cH-28-CaT" firstAttribute="leading" secondItem="bLo-oH-WxY" secondAttribute="leading" constant="147" id="D4Z-PF-lWO"/>
+                            <constraint firstItem="xri-Rb-9b7" firstAttribute="top" secondItem="3cH-28-CaT" secondAttribute="bottom" constant="36" id="MKG-kM-s55"/>
+                            <constraint firstItem="bLo-oH-WxY" firstAttribute="bottom" secondItem="xri-Rb-9b7" secondAttribute="bottom" constant="190" id="NEa-zd-DdK"/>
                             <constraint firstItem="gd1-Ug-TQp" firstAttribute="leading" secondItem="Nrr-tW-Hdi" secondAttribute="leading" id="WHa-rL-TOf"/>
                             <constraint firstItem="bLo-oH-WxY" firstAttribute="bottom" secondItem="Nrr-tW-Hdi" secondAttribute="bottom" constant="499" id="azs-L0-4ij"/>
                             <constraint firstItem="Nrr-tW-Hdi" firstAttribute="leading" secondItem="OIb-Uz-hYd" secondAttribute="leadingMargin" id="dBr-5g-ypa"/>
                             <constraint firstItem="gd1-Ug-TQp" firstAttribute="trailing" secondItem="Nrr-tW-Hdi" secondAttribute="trailing" id="mW0-w7-MlK"/>
+                            <constraint firstItem="3cH-28-CaT" firstAttribute="centerX" secondItem="xri-Rb-9b7" secondAttribute="centerX" id="oj1-Jk-Z1U"/>
                             <constraint firstItem="Nrr-tW-Hdi" firstAttribute="trailing" secondItem="OIb-Uz-hYd" secondAttribute="trailingMargin" id="pjK-CI-MHG"/>
-                            <constraint firstItem="3cH-28-CaT" firstAttribute="leading" secondItem="bLo-oH-WxY" secondAttribute="leading" constant="142" id="rxu-C2-PsZ"/>
                             <constraint firstItem="gd1-Ug-TQp" firstAttribute="top" secondItem="Nrr-tW-Hdi" secondAttribute="bottom" constant="74" id="zU1-cu-P87"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bLo-oH-WxY"/>
@@ -168,22 +178,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rpX-dm-vXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1378" y="-340"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="6Fs-n2-EI7">
-            <objects>
-                <navigationController id="smN-5R-PTF" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dKg-bi-0aI">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="ctz-uv-L6k" kind="relationship" relationship="rootViewController" id="PpA-Is-jev"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SGt-NL-XKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-519" y="-682"/>
         </scene>
         <!--Login Navigation Controller-->
         <scene sceneID="8Mo-py-bFU">
@@ -204,7 +198,4 @@
             <point key="canvasLocation" x="-2201" y="-340"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="nbF-k8-lln"/>
-    </inferredMetricsTieBreakers>
 </document>

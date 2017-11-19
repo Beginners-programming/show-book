@@ -31,7 +31,7 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     }
     
     @IBAction func btnLoginPressed(_ sender: Any) {
-        Log.info?.message("Login Button Pressed")
+        Log.info?.message("## Email Login Module ##")
         
         let email = loginEmailTextField.text
         Log.info?.message("Login Email: \(String(describing: email))")
@@ -44,6 +44,27 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
             Log.info?.message("More Errors")
         }
     }
+    
+    
+    @IBAction func btnBookingHistoryPressed(_ sender: Any) {
+        Log.info?.message("## Booking History Module ##")
+        
+        if let nextViewController = ShowHistoryViewController.storyboardInstance() {
+            
+            // initialize all your class properties
+            // homeViewController.property1 = …
+            // homeViewController.property2 = …
+            // either push or present the nextViewController,
+            // depending on your navigation structure
+            // present present(nextViewController, animated: true, completion: nil)
+            // or push
+            
+            navigationController?.pushViewController(nextViewController, animated: true)
+        } else {
+            Log.error?.message("Show History View Controller - Initialization Failed")
+        }
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "segueTheaterTable") {

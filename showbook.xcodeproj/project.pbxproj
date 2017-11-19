@@ -14,6 +14,8 @@
 		133152A51FBD1A9F00D0D809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 133152A31FBD1A9F00D0D809 /* LaunchScreen.storyboard */; };
 		136A257C1FC091B00035B720 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A257B1FC091B00035B720 /* LoginViewController.swift */; };
 		136A25801FC0ABA80035B720 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A257F1FC0ABA70035B720 /* BaseViewController.swift */; };
+		136A25841FC16ED70035B720 /* ShowHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136A25831FC16ED70035B720 /* ShowHistoryViewController.swift */; };
+		136A25861FC1737F0035B720 /* ShowHistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 136A25851FC1737F0035B720 /* ShowHistoryViewController.storyboard */; };
 		137C4EEE1FBDCB1200AACF5D /* TheaterTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137C4EED1FBDCB1200AACF5D /* TheaterTable.swift */; };
 		13AB8EE61FBF001D000B1DBC /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AB8EE51FBF001D000B1DBC /* Show.swift */; };
 		13AFA1451FBDDBEC00A4322F /* TheaterDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AFA1441FBDDBEC00A4322F /* TheaterDetail.swift */; };
@@ -28,6 +30,8 @@
 		133152A61FBD1A9F00D0D809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		136A257B1FC091B00035B720 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		136A257F1FC0ABA70035B720 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		136A25831FC16ED70035B720 /* ShowHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowHistoryViewController.swift; sourceTree = "<group>"; };
+		136A25851FC1737F0035B720 /* ShowHistoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowHistoryViewController.storyboard; sourceTree = "<group>"; };
 		137C4EED1FBDCB1200AACF5D /* TheaterTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterTable.swift; sourceTree = "<group>"; };
 		13AB8EE51FBF001D000B1DBC /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 		13AFA1441FBDDBEC00A4322F /* TheaterDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterDetail.swift; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 				133152A61FBD1A9F00D0D809 /* Info.plist */,
 				136A257F1FC0ABA70035B720 /* BaseViewController.swift */,
 				136A257B1FC091B00035B720 /* LoginViewController.swift */,
+				136A25831FC16ED70035B720 /* ShowHistoryViewController.swift */,
+				136A25851FC1737F0035B720 /* ShowHistoryViewController.storyboard */,
 				137C4EED1FBDCB1200AACF5D /* TheaterTable.swift */,
 				13AFA1441FBDDBEC00A4322F /* TheaterDetail.swift */,
 				13AB8EE51FBF001D000B1DBC /* Show.swift */,
@@ -162,6 +168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				136A25861FC1737F0035B720 /* ShowHistoryViewController.storyboard in Resources */,
 				133152A51FBD1A9F00D0D809 /* LaunchScreen.storyboard in Resources */,
 				133152A21FBD1A9F00D0D809 /* Assets.xcassets in Resources */,
 				133152A01FBD1A9F00D0D809 /* Main.storyboard in Resources */,
@@ -236,6 +243,7 @@
 				137C4EEE1FBDCB1200AACF5D /* TheaterTable.swift in Sources */,
 				13AFA1451FBDDBEC00A4322F /* TheaterDetail.swift in Sources */,
 				13AB8EE61FBF001D000B1DBC /* Show.swift in Sources */,
+				136A25841FC16ED70035B720 /* ShowHistoryViewController.swift in Sources */,
 				136A257C1FC091B00035B720 /* LoginViewController.swift in Sources */,
 				1331529B1FBD1A9F00D0D809 /* AppDelegate.swift in Sources */,
 				136A25801FC0ABA80035B720 /* BaseViewController.swift in Sources */,
