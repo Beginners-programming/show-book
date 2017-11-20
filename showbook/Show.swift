@@ -72,9 +72,26 @@ class Show {
                 let theater = object["theater"]
                 let email = object["email"]
                 
-                Log.info?.message("Email: \(String(describing: email))")
-                Log.info?.message("Movie: \(String(describing: movie))")
-                Log.info?.message("Theater: \(String(describing: theater))")
+                Log.info?.message("Email: \(String(describing: email)) - Moive: \(String(describing: movie)) - Theater: \(String(describing: theater))")
+                
+            }
+        }
+    }
+    
+    /**Retrieving the Show data via Email - Parse Server**/
+    
+    static func retrieve(email_id: String) {
+        Log.info?.message("Retrieving Show Data via Email")
+        
+        let query = PFQuery(className: "Show")
+        query.whereKey("email", equalTo: email_id)
+        query.findObjectsInBackground { (pfObject, error) in
+            for object in pfObject! {
+                let movie = object["movie"]
+                let theater = object["theater"]
+                let email = object["email"]
+                
+                Log.info?.message("Email: \(String(describing: email)) - Moive: \(String(describing: movie)) - Theater: \(String(describing: theater))")
             }
         }
     }
