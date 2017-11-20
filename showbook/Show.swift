@@ -62,15 +62,17 @@ class Show {
     
     /**Retrieving the Show data - Parse Server**/
     
-    func retrieve() {
+    static func retrieve() {
         Log.info?.message("Retrieving the Show Data from the Parse Server")
         let query = PFQuery(className: "Show")
-        query.includeKeys(["_id", "theater", "movie", "_created_at", "_updated_at"])
+        query.includeKeys(["_id", "email", "theater", "movie", "_created_at", "_updated_at"])
         query.findObjectsInBackground { (pfObject, error) in
             for object in pfObject! {
                 let movie = object["movie"]
                 let theater = object["theater"]
+                let email = object["email"]
                 
+                Log.info?.message("Email: \(String(describing: email))")
                 Log.info?.message("Movie: \(String(describing: movie))")
                 Log.info?.message("Theater: \(String(describing: theater))")
             }

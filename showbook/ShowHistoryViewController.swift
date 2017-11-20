@@ -14,6 +14,8 @@ class ShowHistoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         Log.info?.message("Show History View Controller View Did Load")
+        
+        Show.retrieve()
     }
 
     override func didReceiveMemoryWarning() {
