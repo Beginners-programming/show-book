@@ -8,6 +8,7 @@
 
 import UIKit
 import CleanroomLogger
+import Eureka
 
 class LoginViewController: BaseViewController, UITextFieldDelegate {
 
@@ -16,7 +17,8 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loginEmailTextField.delegate = self
+        Log.info?.message("Login View Controller - View Did Load")
+        //self.loginEmailTextField.delegate = self
         self.mojoShow = Show()
     }
 
@@ -26,7 +28,7 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         Log.info?.message("Touches Began - Outside of the textview")
-        //loginEmailTextField.resignFirstResponder()
+        loginEmailTextField.resignFirstResponder()
         self.view.endEditing(true)
     }
     
@@ -34,6 +36,7 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
         Log.info?.message("## Email Login Module ##")
         
         let email = loginEmailTextField.text
+        
         Log.info?.message("Login Email: \(String(describing: email))")
         
         do {

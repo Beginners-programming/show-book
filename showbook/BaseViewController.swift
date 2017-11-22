@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Eureka
+
+
 
 class BaseViewController: UIViewController {
 
@@ -14,10 +17,6 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     func notifyUser(msgTitle: String, msgTxt: String) {
         let alert = UIAlertController(title: msgTitle , message: msgTxt, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
