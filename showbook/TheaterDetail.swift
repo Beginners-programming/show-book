@@ -31,11 +31,8 @@ class TheaterDetail: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
 
         moviePicker.delegate = self
         moviePicker.dataSource = self
-        
-        self.movieData = ["Thor", "Pursuit of Happyness", "Justice League", "Coco", "Ferdinand", "Star Wars: The Last Jedi"]
+
         self.timePickerData = ["8 AM", "12 PM", "3 PM", "7 PM", "10 PM"]
-        
-        
         
         // Sample GLOSS Section to see if the JSON gets parsed
         let json: AnyObject
@@ -46,9 +43,11 @@ class TheaterDetail: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
         json = try! JSONSerialization.jsonObject(with: data, options: []) as AnyObject
         let dictionary = json as? [String: Any]
         
+        // Loading the movies array form the JSON file
         let movies = ShowBookMovies(json: dictionary!)
-        print(movies.debugDescription)
-        
+        for movie in (movies?.movies)! {
+            self.movieData.append(movie.title!)
+        }
     }
     
     
