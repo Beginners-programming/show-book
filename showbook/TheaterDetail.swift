@@ -9,6 +9,7 @@
 import UIKit
 import CleanroomLogger
 import Parse
+import Gloss
 
 class TheaterDetail: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
  
@@ -34,7 +35,44 @@ class TheaterDetail: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
         self.movieData = ["Thor", "Pursuit of Happyness", "Justice League", "Coco", "Ferdinand", "Star Wars: The Last Jedi"]
         self.timePickerData = ["8 AM", "12 PM", "3 PM", "7 PM", "10 PM"]
         
+        
+        
+        // Sample GLOSS Section to see if the JSON gets parsed
+        let json: AnyObject
+        
+        let url = Bundle.main.url(forResource: "movie", withExtension: "json")!
+        let data = try! Data(contentsOf: url)
+        
+        json = try! JSONSerialization.jsonObject(with: data, options: []) as AnyObject
+        let dictionary = json as? [String: Any]
+        
+        let movies = ShowBookMovies(json: dictionary!)
+        print(movies.debugDescription)
+        
     }
+    
+    
+    // JSON Parse Classes - GLOSS
+    public struct ShowBookMovies: JSONDecodable {
+        public let movies: [Movies]?
+        
+        public init?(json: JSON) {
+            self.movies = "movies" <~~ json
+        }
+    }
+    
+    public struct Movies: JSONDecodable {
+        public let title: String?
+        
+        public init?(json: JSON) {
+            self.title = "title" <~~ json
+        }
+    }
+    
+    
+    
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
