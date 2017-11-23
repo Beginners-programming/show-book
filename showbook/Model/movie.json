@@ -1,0 +1,22 @@
+{
+    "movies": [
+        {
+        "title": "Thor"
+        },
+        {
+        "title": "Pursuit of Happyness"
+        },
+        {
+        "title": "Justice League"
+        },
+        {
+        "title": "Coco"
+        },
+        {
+        "title": "Ferdinand"
+        },
+        {
+        "title": "Star Wars: The Last Jedi"
+        }
+    ]
+}
