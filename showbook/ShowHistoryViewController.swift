@@ -11,11 +11,14 @@ import CleanroomLogger
 
 class ShowHistoryViewController: UIViewController {
 
+    @IBOutlet weak var txtAreaShowHistory: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         Log.info?.message("Show History View Controller View Did Load")
         
-        Show.retrieve(email_id: "binay.b@gmail.com")
+        let data: String = Show.retrieve(email_id: "binay.b@gmail.com")
+        txtAreaShowHistory.text = data
     }
 
     override func didReceiveMemoryWarning() {
