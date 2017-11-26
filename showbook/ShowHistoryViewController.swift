@@ -17,8 +17,7 @@ class ShowHistoryViewController: UIViewController {
         super.viewDidLoad()
         Log.info?.message("Show History View Controller View Did Load")
         
-        let data: String = Show.retrieve(email_id: "binay.b@gmail.com")
-        txtAreaShowHistory.text = data
+        Show.retrieve(email_id: "binay.b@gmail.com", reference: txtAreaShowHistory)
     }
 
     override func didReceiveMemoryWarning() {

@@ -72,34 +72,34 @@ class Show {
                 let theater = object["theater"]
                 
                 Log.info?.message("Email: \(String(describing: self.email)) - Moive: \(String(describing: movie)) - Theater: \(String(describing: theater))")
-                
             }
         }
     }
     
     /**Retrieving the Show data via Email - Parse Server**/
     
-    static func retrieve(email_id: String) -> String {
+    static func retrieve(email_id: String, reference: UITextView) {
         Log.info?.message("Retrieving Show Data via Email")
         
         let query = PFQuery(className: "Show")
         var dataDescription: String = ""
         
         query.whereKey("email", equalTo: email_id)
-        query.findObjectsInBackground { (pfObject, error) in
+        query.findObjectsInBackground(block: { (pfObject, error) in
             for object in pfObject! {
                 let movie = object["movie"]
                 let theater = object["theater"]
                 let email = object["email"]
                 let message = "Email: \(String(describing: email)) - Moive: \(String(describing: movie)) - Theater: \(String(describing: theater))"
                 
-                
-                //Log.info?.message(message)
+                Log.info?.message(message)
+                dataDescription += message
             }
-        }
-        Log.info?.message(dataDescription)
-        return dataDescription
+            reference.text = dataDescription
+        })
+        Log.info?.message("Outside PFQuery")
     }
+    
 }
 
 
